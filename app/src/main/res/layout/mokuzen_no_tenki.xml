@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="15dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#DC9FB4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/TenkiUpdateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="更新时间　14:25"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/MokuzenTenkiEmoji"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="☀"
+                    android:textSize="45dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/MokuzenTemperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌡️21℃　"
+                    android:textSize="80dp"
+                    android:gravity="center"
+                    android:layout_marginTop="-5dp"
+                    android:textStyle=""/>
+
+                <TextView
+                    android:id="@+id/MokuzenWindAndHumidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌬️ 西风 2级　|　💧 4%"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/TodayTemperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="今日温度　8℃~20℃"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:textColor="#DC9FB4"/>
+
+                    <TextView
+                        android:id="@+id/TodayTenki"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="晴转霾　西南风微风　较冷"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:textColor="#DC9FB4"/>
+
+                    <TextView
+                        android:id="@+id/TodayClothes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="建议着大衣、呢外套加毛衣、卫衣等服装。"
+                        android:layout_marginTop="5dp"
+                        android:textSize="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="#DC9FB4"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="　"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="40dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="　"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="　"
+                        android:textSize="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    
+
+
+</android.support.constraint.ConstraintLayout>

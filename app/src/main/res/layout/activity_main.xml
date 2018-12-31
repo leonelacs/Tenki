@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="160dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:srcCompat="@drawable/ic_pojishoningu_256"
+        app:layout_constraintLeft_toRightOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="100"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/SwipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="14">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_weight="14"
+                android:orientation="horizontal"
+                android:background="#fffffb">
+
+                <Spinner
+                    android:id="@+id/ProvinceSelection"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:entries="@array/provinces_array"
+                    android:spinnerMode="dialog" />
+
+                <Spinner
+                    android:id="@+id/CitySelection"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:spinnerMode="dialog" />
+
+                <Spinner
+                    android:id="@+id/DistrictSelection"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:spinnerMode="dialog" />
+
+                <Button
+                    android:id="@+id/ByCoordinate"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:text="📍"
+                    android:textSize="26dp"
+                    android:textColor="#FEDFE1"/>
+            </LinearLayout>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/MainMiddle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="96"
+            android:orientation="vertical"
+            android:background="#0F2540">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/taiki_osen"
+                    android:id="@+id/OsenPage"
+                    android:visibility="invisible"/>
+
+                <include layout="@layout/tenki_yohou"
+                    android:id="@+id/YohouPage"
+                    android:visibility="invisible"/>
+
+                <include layout="@layout/mokuzen_no_tenki"
+                    android:id="@+id/MokuzenPage"
+                    android:visibility="visible"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>
